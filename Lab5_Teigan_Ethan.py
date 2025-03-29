@@ -82,7 +82,7 @@ class MagentoTest(unittest.TestCase):
      """Select Product and Add to Cart"""
      print("Selecting a product and adding it to the cart")
      driver = self.driver
-
+     time.sleep(2)
      #adds atumn pullie to cart
      product = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//img[@alt='Autumn Pullie-M-Purple']")))
      self.hover_element(product)
@@ -92,7 +92,7 @@ class MagentoTest(unittest.TestCase):
      """View Cart and Proceed to Checkout"""
      print("Proceeding to checkout")
      driver = self.driver
-    
+     time.sleep(2)
     #clicks view cart then proceeds to checkout
      WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//a[@class='action showcart']"))).click()
      WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[@id='top-cart-btn-checkout']"))).click()
